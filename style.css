@@ -1,0 +1,362 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+body {
+    margin: 0px;
+    height: 100%;
+    width:100%;
+    display: grid;
+    place-items: center; 
+  }
+  
+  .header {
+    height: 100px;
+    width: 100%; /* Make sure the header spans the full width */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    position: relative;
+    z-index: 1; /* Ensure the header content is on top */
+    background-color:#F29559;
+  }
+  
+  #navbar {
+  
+    font-family: "SUSE", sans-serif;
+    position: relative;
+    z-index: 2; /* Ensure the navbar is visible on top of the background */
+  }
+  
+  #navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin and padding */
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0.5rem;
+    position: relative;
+  }
+  
+  .link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 30px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .link:hover::before {
+    transform: scaleX(1);
+  }
+  
+#Main-Div{
+  width:700px;
+  background-color:#F29559;
+  height:950px;
+  display:flex;
+  position:relative;
+  border: 8px solid #0C0C0C;
+ animation-name:Border-animation;
+ animation-duration: 5s;
+ animation-iteration-count: infinite;
+ animation-timing-function: ease-in-out;
+    margin-top: 50px;
+   align-items: flex-start;
+   justify-content: flex-start;
+   border-radius:10px;
+
+
+}
+  @keyframes Border-animation{
+    to{border-color:#F29559;
+
+    }
+    from{
+      border-color:#283845;
+      
+    }
+  }
+  #SideBar{
+    background-color:#283845 ;
+    
+ 
+
+height:950px;
+overflow:hidden;
+transition:0.5s;
+display:grid;
+
+
+
+  }
+  #SideBar ul{
+    padding-left:20px;
+  }
+    
+#SideBar ul li{
+  color:#F2D492;
+  list-style:none;
+  display:block;
+  margin-bottom:2px;
+  font-family: "Karla", sans-serif;
+  Font-size:15px;
+  
+  
+}
+#SideBar .Timeline{
+  Font-size:12px;
+  color:#c9ad70;
+}
+h2,h4{
+  color:#F2D492;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom:0px;
+}
+strong{
+  color:#F2D492;
+  display:block;
+  text-align:center;
+  
+  font-family: 'Montserrat', sans-serif;
+}
+#My-pic{
+  display: grid;
+  justify-content: center;
+}
+#My-pic img {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin-top:30px;
+  border-radius:50%;
+  border: 5px solid; /* Initial border setup */
+  animation: borderColorChange 5s infinite;
+  
+}
+@keyframes borderColorChange {
+  0% { border-color: #F29559; }
+  100% { border-color:#F2D492; }}
+   a{
+    color:#F2D492
+  }
+  
+  
+  #secondDiv{
+    width:100%;
+    height: 950px;
+    display:flex;
+   flex-direction: column;
+   align-items: flex-start;
+  }
+  .container{
+    width:95%;
+    height: 200px;
+    border:4px solid transparent;
+    background-color:#ca7b46;
+    border-radius:10px;
+    margin:10px;
+    
+
+  }
+  #firstContainer.container{
+    margin-top:20px;
+    font-family: 'Montserrat', sans-serif;
+    padding:5px;
+    width:456px;
+    font-weight: bolder;
+  }
+  .button{
+  padding: 8px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3;
+  font-family: 'Montserrat', sans-serif;
+  }
+  #skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  #skills ul li {
+    position: relative;
+    margin: 10px;
+    text-align: left;
+    padding-right: 60px;
+}
+.skills-content{
+  padding:20px;
+  display:flex;
+  flex-direction: row;
+
+}
+#h-skills{
+margin-bottom:0px;
+}
+#toggleSkills{
+  margin-left:5px;
+}
+.skills-content ul li img{
+  width:30px;
+  height:30px;
+}
+button {
+  background-color: #283845;
+  color: #F2D492;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left:10px;
+}
+
+button:hover {
+  background-color: #241207;
+}
+
+/* Skills Section */
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px; /* Limit container width to fit three skills per row */
+  margin: 20px auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Smooth transition for fading */
+}
+
+/* Ensure skills appear in rows of three */
+.skill-item {
+  flex-basis: calc(33.33% - 2rem); /* Three items per row with gap */
+  text-align: center;
+  transform: translateX(-100%); /* Start off-screen to the left */
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+.skill-image {
+  width: 100px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  margin: 0px;
+}
+
+.skill-item p {
+  font-size: 16px;
+  color: #283845;
+  margin:0px;
+}
+
+/* Transition when showing skills */
+.skills.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+.skills.show .skill-item {
+  transform: translateX(0); /* Bring items into view */
+  opacity: 1;
+}
+
+/* Delay for each skill item to create a staggered animation */
+.skills.show .skill-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.skills.show .skill-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.skills.show .skill-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.skills.show .skill-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.skills.show .skill-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.skills.show .skill-item:nth-child(6) {
+  transition-delay: 0.6s;
+}
+#secondContainer.container{
+  height: 300px;
+  font-family: 'Montserrat', sans-serif;
+}
+.Timeperiod {
+  Font-size:12px;
+  color: #F2D492;
+  font-family: 'Montserrat', sans-serif;
+  margin-left:20px;
+}
+.container p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  margin-left:10px;
+  font-weight: bolder;
+  
+}
+/* Container for the Interests Section */
+/* Container for the Interests Section */
+.interests {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Vertically center items */
+  padding: 10px; /* Padding inside the container */
+
+  border-radius: 8px;
+  overflow: hidden; /* Prevent overflow if items are larger than the container */
+}
+
+/* Interest Items */
+.interest-item {
+  width: 120px; /* Adjust this to fit 3 items per row */
+  text-align: center;
+  padding: 5px; /* Padding around each item */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.interest-icon {
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.interest-item p {
+  font-size: 12px; /* Smaller font size to fit within the container */
+  color: #283845;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Flexbox ensures 3 items per row, so no need for fixed widths on container children */
+.interests.show .interest-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

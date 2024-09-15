@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #f5f5f5; /* Optional: for a softer background color */
+}
+
+/* Header Section */
+/* Header */
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #283845; /* Dark background to ensure visibility */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it's on top */
+}
+
+/* Navbar */
+#navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 11;
+}
+
+/* Make sure ul is visible and centered */
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Space between items */
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the links */
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Increase font size for visibility */
+    padding: 10px;
+}
+
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 30px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.link:hover::before {
+    transform: scaleX(1);
+}
+body, html {
+    overflow: visible; /* Ensure no overflow is hiding elements */
+}
+
+#Main-Div {
+    margin-top: 150px; /* Ensure it's not overlapping with the fixed header */
+}
+#navbar ul {
+    border: 1px solid red; /* Temporary border for debugging */
+}
+
+#navbar ul li {
+    border: 1px solid blue; /* Temporary border for debugging */
+}
+
+.link {
+    border: 1px solid yellow; /* Temporary border for debugging */
+}
+
+
+/* Main Content Section */
+#Main-Div {
+    width: 700px;
+    background-color: #F29559;
+    height: 950px;
+    display: flex;
+    position: relative;
+    border: 10px solid #0C0C0C;
+    animation-name: Border-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-top: 150px; /* Adjusted margin to prevent overlap with header */
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+}
+
+@keyframes Border-animation {
+    0% {
+        border-color: blue;
+    }
+    100% {
+        border-color: #0C0C0C;
+    }
+}
+
+#SideBar {
+    background-color: #283845;
+    width: 370px;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    border-right: 5px solid #0C0C0C; /* Adds a clean border */
+}
+
+#SideBar ul {
+    padding-left: 20px;
+}
+
+#SideBar ul li {
+    color: #F2D492;
+    list-style: none;
+    margin-bottom: 10px; /* Increased margin for better spacing */
+    font-family: "Karla", sans-serif;
+    font-size: 15px;
+}
+
+#SideBar .Timeline {
+    font-size: 12px;
+    color: #c9ad70;
+}
+
+h2, h4 {
+    color: #F2D492;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+strong {
+    color: #F2D492;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* My Picture Section */
+#My-pic img {
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 50%;
+    border: 5px solid;
+    animation: borderColorChange 5s infinite;
+}
+
+@keyframes borderColorChange {
+    0% { border-color: #F29559; }
+    100% { border-color: #F2D492; }
+}
+
+/* Second Div */
+#secondDiv {
+    background-color: aqua;
+    width: 100%;
+    height: 950px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-left: 5px solid #0C0C0C;
+}
+
+/* Link color in sidebar */
+a {
+    color: #F2D492;
+    text-decoration: none;
+}
