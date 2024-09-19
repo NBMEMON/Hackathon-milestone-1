@@ -13,3 +13,4 @@ document.getElementById("toggleButton").addEventListener("click", function() {
 window.addEventListener("load", function() {
   document.body.classList.add("loaded"); // Add class to trigger the transition
 });
+

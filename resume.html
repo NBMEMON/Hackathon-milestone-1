@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href ="style.css">
+    <link rel="stylesheet" href ="resume.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,13 +15,18 @@
             <li><a href="resume.html" class="link"><b>Generate Resume</b></a></li>
         </ul>
     </section>
-    
+    <div class="edit-buttons">
+      <button onclick="toggleEdit('secondDiv')">Edit</button>
+      <button onclick="saveContent('secondDiv')">Save</button>
+  </div>
 </div>
 
     <div id="Main-Div">
 <div id="SideBar" contenteditable="true"><div id="My-pic">
-
-  <img src="my pic.jpg" alt="My Picture" >
+  <!-- File input for image upload -->
+  <input type="file" id="uploadPic" style="display:none" onchange="previewImage(event)">
+  <!-- Clickable image -->
+  <img src="my pic.jpg" alt="My Picture" onclick="document.getElementById('uploadPic').click()">
 </div>
  
   <h2> Naeeb Sohail</h2>
@@ -172,7 +177,9 @@
 </div>
 
 
-<script src="script.js"></script>
+<script src="resume.js"></script>
     
 </body>
 </html>
+
+

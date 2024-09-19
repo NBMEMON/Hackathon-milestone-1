@@ -373,9 +373,9 @@ button:hover {
 /* Edit buttons styling */
 .edit-buttons {
   position: absolute;
-  top: 0;
+  
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  
   color: #fff;
   padding: 5px;
 }
@@ -383,5 +383,3 @@ button:hover {
 .edit-buttons button {
   margin: 0 2px;
 }
-
-
