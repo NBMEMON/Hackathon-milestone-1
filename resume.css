@@ -140,7 +140,8 @@ strong{
 }
 #My-pic img {
   height: 150px;
-  width: 150px;
+  width: 150px; 
+  margin-left: 25px;
   display: block;
   margin-top:30px;
   border-radius:50%;
@@ -382,4 +383,20 @@ button:hover {
 
 .edit-buttons button {
   margin: 0 2px;
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#footerButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+}
+
+#footerButtons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }

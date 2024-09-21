@@ -22,12 +22,13 @@
 </div>
 
     <div id="Main-Div">
-<div id="SideBar" contenteditable="true"><div id="My-pic">
+<div id="SideBar" contenteditable="true">
+  <div id="My-pic">
   <!-- File input for image upload -->
   <input type="file" id="uploadPic" style="display:none" onchange="previewImage(event)">
   <!-- Clickable image -->
   <img src="my pic.jpg" alt="My Picture" onclick="document.getElementById('uploadPic').click()">
-</div>
+
  
   <h2> Naeeb Sohail</h2>
   <h4> Web Dev</h4>
@@ -92,6 +93,7 @@
        Urdu
     </li>
   </ul>
+</div>
 </div>
 <div id="secondDiv">
   
@@ -175,7 +177,17 @@
   
   </div>
 </div>
+</div>
+<!-- Add this to your footer section -->
+<footer>
+    <div id="footerButtons" style="display: none;">
+        <button id="shareButton">Share</button>
+        <button id="downloadPDFButton">Download as PDF</button>
+    </div>
+</footer>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script src="resume.js"></script>
     
